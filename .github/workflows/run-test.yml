@@ -10,7 +10,8 @@ on:
 
 
 jobs: 
-  verifcommit: 
+  testunitaire: 
+    name: Test Unitaire
     if: startsWith(github.head_ref, 'feature/')
     runs-on: ubuntu-latest
     strategy: 
