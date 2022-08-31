@@ -20,5 +20,6 @@ jobs:
         uses: robvanderleek/create-issue-branch@main
         with:
           branchName: 'feature/${issue.number}-${issue.title}'
+          defaultBranch: 'develop'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
