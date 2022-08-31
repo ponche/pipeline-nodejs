@@ -28,7 +28,12 @@ jobs:
       - name: installation des dependance  
         run: npm install 
       - name: lance les test unitaire 
-        run: npm run test
+        run: npm run test >> logtest.txt
+      - name: création des log de test
+        uses: actions/upload-artifact@v3
+        with: 
+          name: LogTest
+          path: logtest.txt
 
 
 
