@@ -17,19 +17,24 @@ jobs:
     strategy: 
       fail-fast: false
       matrix: 
-        node-version: [14, 16]
+        node-version: [14.x, 16.x]
+        
     steps:
       - name: recuperation code 
         uses: actions/checkout@v3
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+
       - name: installation des dependance  
         run: npm install 
+
       - name: lance les test unitaire 
         run: npm run test >> logtest.txt
+
       - name: création des log de test
         uses: actions/upload-artifact@v3
         with: 
