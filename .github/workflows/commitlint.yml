@@ -12,14 +12,11 @@ jobs:
       steps:
         - name: recuperation code 
           uses: actions/checkout@v3
+
         - name: Commit Linter
-        # You may pin to the exact commit or the version.
-        # uses: wagoid/commitlint-github-action@2d572ed5ea8b369af534fa21eea186a7eef07cda
           uses: wagoid/commitlint-github-action@v2.0.3
           with:
-            # Commitlint config file. If the file doesn't exist, config-conventional settings will be loaded as a fallback.
             configFile: ./commitlint.config.js
-            # When set to true, we follow only the first parent commit when seeing a merge commit. More info in git-log docs https://git-scm.com/docs/git-log#Documentation/git-log.txt---first-parent
 
 
     
