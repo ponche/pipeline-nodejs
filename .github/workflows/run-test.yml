@@ -15,7 +15,7 @@ jobs:
     if: startsWith(github.head_ref, 'feature/')
     runs-on: ubuntu-latest
     strategy: 
-      fail-fast: true
+      fail-fast: false
       matrix: 
         node-version: [14, 16]
     steps:
