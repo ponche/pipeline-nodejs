@@ -29,8 +29,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: installation des dependance  
-        run: npm install 
+      - name: installation des dependance en clean install
+        run: npm ci
+
+      - name: build 
 
       - name: lance les test unitaire 
         run: npm run test >> logtest.txt
