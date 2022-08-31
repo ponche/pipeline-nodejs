@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: lance les test unitaire 
-        run: npm run test >> logtest.txt
+        run: npm run test:coverage >> logtest.txt
 
       - name: création des log de test
         uses: actions/upload-artifact@v3
