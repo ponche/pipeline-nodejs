@@ -32,8 +32,6 @@ jobs:
       - name: installation des dependance en clean install
         run: npm ci
 
-      - name: build 
-
       - name: lance les test unitaire 
         run: npm run test >> logtest.txt
 
